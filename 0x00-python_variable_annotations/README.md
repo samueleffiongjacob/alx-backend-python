@@ -1,17 +1,20 @@
 # Python Annotations
 
-![](https://florian-dahlitz.de/media/articles/leverage-the-full-potential-of-type-hints/thumbnail-m.webp)
+![image](https://florian-dahlitz.de/media/articles/leverage-the-full-potential-of-type-hints/thumbnail-m.webp)
 
 Python is a dynamically-typed language. That means that variable types are dynamically set at run-time, upon assignment of a value to a variable.
 
 For example, in
+
 ```python
 def fn(a, b):
     return a + b
 ```
+
 The types of a and b are not known at build-time, only when a and b are assigned values at run-time.
 
 Hence, calling
+
 ```python
 
 def fn(a, b):
@@ -20,6 +23,7 @@ def fn(a, b):
 
 fn("a", 1)
 ```
+
 somewhere in your code will not raise an exception until the code is actually executed and the function is called:
 
 ```bash
@@ -28,6 +32,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: can only concatenate str (not "int") to str
 ```
+
 In Python 3, type annotations do not change this. Python is still a dynamically-typed language. Type annotations serve the following purpose:
 
 - Code documentation: thanks to them, a developer reading type-annotated code (his own or someone else’s) will know exactly what type each variables is supposed to be. This helps reduce bugs and exceptions and accelerate the development cycle.
